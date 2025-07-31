@@ -1,174 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Ashish</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 30px;
-      background-color: #2c3e50;
-      color: white;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to right, #667eea, #764ba2);
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      background-color: white;
-      color: #764ba2;
-      border: none;
-      padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #ddd;
-    }
-
-    .features, .testimonials, .contact, .footer {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .features h2, .testimonials h2, .contact h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .feature-card {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .testimonials-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .testimonial {
-      background: white;
-      padding: 20px;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .contact form {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    .contact input[type="email"] {
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .footer {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      nav {
-        margin-top: 10px;
-        width: 100%;
-        text-align: center;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 10px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-    }
-  </style>
+  <title>InnoBoost - Empower Your Ideas</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
+<body>
   <header class="header">
-    <div class="logo">Ashish Site</div>
-    <nav>
+    <div class="logo">InnoBoost</div>
+    <nav class="nav">
       <a href="#features">Features</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
@@ -176,44 +21,62 @@
   </header>
 
   <section class="hero" data-aos="fade-up">
-    <h1>Welcome to Our Landing Page</h1>
-    <p>Your digital journey starts here. Fully responsive and modern design.</p>
-    <a href="#contact" class="btn">Get Started</a>
+    <h1>Empowering Innovation with InnoBoost</h1>
+    <p>We bring your product ideas to life with intuitive design and unmatched support.</p>
+    <a href="#features" class="btn">Learn More</a>
   </section>
 
   <section id="features" class="features" data-aos="fade-up">
-    <h2>Features</h2>
+    <h2>Why Choose InnoBoost?</h2>
     <div class="features-grid">
-      <div class="feature-card">Fast and Responsive</div>
-      <div class="feature-card">Easy to Use</div>
-      <div class="feature-card">Modern Design</div>
+      <div class="feature-card">
+        <i class="fas fa-rocket fa-2x"></i>
+        <h3>Fast Deployment</h3>
+        <p>Launch your ideas at lightning speed.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-cogs fa-2x"></i>
+        <h3>Custom Solutions</h3>
+        <p>Tailored features for your specific needs.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-headset fa-2x"></i>
+        <h3>24/7 Support</h3>
+        <p>We’re here to help, always.</p>
+      </div>
     </div>
   </section>
 
   <section id="testimonials" class="testimonials" data-aos="fade-up">
     <h2>What Our Users Say</h2>
     <div class="testimonials-list">
-      <div class="testimonial">“Amazing experience!” – User A</div>
-      <div class="testimonial">“Loved the simplicity and style.” – User B</div>
-      <div class="testimonial">“Highly recommend to others.” – User C</div>
+      <div class="testimonial">
+        <p>"InnoBoost helped me launch my app in just 3 weeks. Incredible service!"</p>
+        <strong>- Priya Sharma</strong>
+      </div>
+      <div class="testimonial">
+        <p>"The best experience I’ve had with any startup support company."</p>
+        <strong>- Rohan Verma</strong>
+      </div>
     </div>
   </section>
 
   <section id="contact" class="contact" data-aos="fade-up">
-    <h2>Stay Updated</h2>
-    <form onsubmit="event.preventDefault(); alert('Subscribed!');">
+    <h2>Stay in Touch</h2>
+    <form>
       <input type="email" placeholder="Enter your email" required>
       <button type="submit" class="btn">Submit</button>
     </form>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Ashish. All rights reserved.</p>
+    <p>&copy; 2025 InnoBoost. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 </body>
+
 </html>
