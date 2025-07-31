@@ -3,85 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StartupX - Responsive Landing Page</title>
+  <title>StartupX</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <div class="container nav">
-      <h1 class="logo">StartupX</h1>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Startup<span>X</span></h1>
       <nav>
-        <a href="#features">Features</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-content" data-aos="fade-up">
+    <div class="hero-content" data-aos="fade-up">
       <h2>Bring Your Ideas to Life</h2>
       <p>Empower your startup with tools built for success. Launch, grow, and scale effortlessly.</p>
       <div class="hero-buttons">
-        <a href="#" class="btn">Get Started</a>
-        <a href="#features" class="btn btn-secondary">Learn More</a>
+        <a href="#" class="btn primary">Get Started</a>
+        <a href="#" class="btn secondary">Learn More</a>
       </div>
     </div>
   </section>
 
-  <section id="features" class="features container" data-aos="fade-up">
-    <h2>Why Choose Us</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Fast Launch</h3>
-        <p>Deploy your ideas quickly with our no-code tools and templates.</p>
-      </div>
-      <div class="card">
-        <h3>Scalable</h3>
-        <p>Built for scale so your product grows with your audience.</p>
-      </div>
-      <div class="card">
-        <h3>Secure</h3>
-        <p>Data privacy and security features you can rely on.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="testimonials" class="testimonials container" data-aos="fade-up">
-    <h2>What Our Users Say</h2>
-    <div class="grid">
-      <div class="testimonial">
-        <p>"StartupX helped us launch in 2 weeks! Love the experience."</p>
-        <span>- Riya M., Founder of TechNest</span>
-      </div>
-      <div class="testimonial">
-        <p>"The most intuitive platform we've used. Highly recommended."</p>
-        <span>- Karan S., CTO of InnovateNow</span>
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 data-aos="fade-up">Why Choose Us?</h2>
+      <div class="feature-grid">
+        <div class="feature" data-aos="zoom-in">
+          <h3>Fast Deployment</h3>
+          <p>Launch your startup within minutes using our tools and services.</p>
+        </div>
+        <div class="feature" data-aos="zoom-in" data-aos-delay="100">
+          <h3>Scalable Infrastructure</h3>
+          <p>Our infrastructure grows with your business to ensure smooth operation.</p>
+        </div>
+        <div class="feature" data-aos="zoom-in" data-aos-delay="200">
+          <h3>Secure & Reliable</h3>
+          <p>Built with top security protocols to keep your data safe and sound.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact container" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>Got questions or feedback? Reach out to us at:</p>
-    <ul>
-      <li>Email: support@startupx.com</li>
-      
-    </ul>
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 data-aos="fade-up">What Our Users Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial" data-aos="fade-right">
+          <p>"StartupX made our launch seamless and effective. Highly recommended!"</p>
+          <h4>- Anika Sharma</h4>
+        </div>
+        <div class="testimonial" data-aos="fade-left">
+          <p>"The best platform for early-stage startups. Their tools saved us weeks!"</p>
+          <h4>- Rohan Gupta</h4>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 StartupX. All rights reserved.</p>
+    <p>© 2025 StartupX. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
