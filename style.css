@@ -1,151 +1,183 @@
-:root {
-  --primary: #4f46e5;
-  --secondary: #9333ea;
-  --dark: #1e293b;
-  --light: #f9fafb;
-}
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: var(--light);
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
   color: #333;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-header {
-  background: var(--dark);
-  color: white;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.navbar {
+  background: #1f3a52;
   padding: 1rem 0;
 }
 
-.nav {
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #ff9f43;
+}
+
+.navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-nav a {
-  color: white;
-  margin-left: 2rem;
-  text-decoration: none;
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
 }
 
 .hero {
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
-  color: white;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 6rem 1rem;
 }
 
-.hero-content h2 {
+.hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .btn {
-  background: white;
-  color: var(--primary);
   padding: 0.8rem 1.5rem;
-  border-radius: 8px;
+  border: none;
+  border-radius: 50px;
   font-weight: bold;
-  text-decoration: none;
+  cursor: pointer;
   transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn.primary {
+  background: #fff;
+  color: #333;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .btn:hover {
-  background: #e0e7ff;
+  transform: scale(1.05);
 }
 
-.btn-secondary {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
+.features {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #fff;
 }
 
-.btn-secondary:hover {
-  background: white;
-  color: var(--primary);
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.features, .testimonials, .contact {
-  padding: 4rem 0;
+.feature {
+  background: #f1f1f1;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.testimonials {
+  background: #f7f9fb;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
-.features h2, .testimonials h2, .contact h2 {
-  margin-bottom: 2rem;
-}
-
-.grid {
+.testimonial-grid {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.card, .testimonial {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+.testimonial {
+  background: #fff;
+  padding: 1.5rem;
+  border-left: 5px solid #ff9f43;
+  border-radius: 8px;
 }
 
-.testimonial span {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-  color: var(--primary);
+.contact {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #fff;
 }
 
-.contact ul {
-  list-style: none;
-  margin-top: 1rem;
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact input {
+  flex: 1 1 60%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 footer {
-  background: var(--dark);
-  color: white;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem;
+  background: #1f3a52;
+  color: #fff;
   font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-content h2 {
+  .hero h2 {
     font-size: 2rem;
   }
-
-  .hero-content p {
-    font-size: 1rem;
+  .nav-links {
+    gap: 1rem;
   }
 }
