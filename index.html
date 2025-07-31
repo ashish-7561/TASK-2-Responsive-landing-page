@@ -1,91 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Startup Landing Page</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Ashish</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background-color: #2c3e50;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: white;
+      color: #764ba2;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .features, .testimonials, .contact, .footer {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features h2, .testimonials h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature-card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .testimonials-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .contact form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact input[type="email"] {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header class="header">
-    <div class="container nav-container">
-      <div class="logo">MyStartup</div>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <div class="logo">Ashish Site</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1 data-aos="fade-up">Welcome to MyStartup</h1>
-      <p data-aos="fade-up" data-aos-delay="100">A modern solution for your growing business.</p>
-      <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="200">
-        <a href="#" class="btn primary">Get Started</a>
-        <a href="#" class="btn secondary">Learn More</a>
-      </div>
+  <section class="hero" data-aos="fade-up">
+    <h1>Welcome to Our Landing Page</h1>
+    <p>Your digital journey starts here. Fully responsive and modern design.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+  <section id="features" class="features" data-aos="fade-up">
+    <h2>Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">Fast and Responsive</div>
+      <div class="feature-card">Easy to Use</div>
+      <div class="feature-card">Modern Design</div>
     </div>
   </section>
 
-  <section class="features" id="features">
-    <div class="container">
-      <h2 data-aos="fade-up">Features</h2>
-      <div class="features-grid">
-        <div class="feature-card" data-aos="fade-right">
-          <h3>Fast & Secure</h3>
-          <p>We ensure blazing-fast performance and security.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-up">
-          <h3>Responsive Design</h3>
-          <p>Looks great on all devices, mobile to desktop.</p>
-        </div>
-        <div class="feature-card" data-aos="fade-left">
-          <h3>Easy Integration</h3>
-          <p>Integrate easily with your existing workflows.</p>
-        </div>
-      </div>
+  <section id="testimonials" class="testimonials" data-aos="fade-up">
+    <h2>What Our Users Say</h2>
+    <div class="testimonials-list">
+      <div class="testimonial">“Amazing experience!” – User A</div>
+      <div class="testimonial">“Loved the simplicity and style.” – User B</div>
+      <div class="testimonial">“Highly recommend to others.” – User C</div>
     </div>
   </section>
 
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <h2 data-aos="fade-up">What Our Users Say</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial" data-aos="zoom-in">
-          <p>“Absolutely amazing service. Highly recommend!”</p>
-          <strong>- Riya</strong>
-        </div>
-        <div class="testimonial" data-aos="zoom-in" data-aos-delay="100">
-          <p>“This startup transformed our workflow!”</p>
-          <strong>- Akash</strong>
-        </div>
-        <div class="testimonial" data-aos="zoom-in" data-aos-delay="200">
-          <p>“Responsive and super fast support team.”</p>
-          <strong>- Sneha</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 data-aos="fade-up">Contact Us</h2>
-      <form class="contact-form" data-aos="fade-up" data-aos-delay="100">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit" class="btn primary">Submit</button>
-      </form>
-    </div>
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Stay Updated</h2>
+    <form onsubmit="event.preventDefault(); alert('Subscribed!');">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Submit</button>
+    </form>
   </section>
 
   <footer class="footer">
-    <p>© 2025 MyStartup. All rights reserved.</p>
+    <p>&copy; 2025 Ashish. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
