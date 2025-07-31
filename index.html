@@ -2,80 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NovaLaunch | Transform Your Ideas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StartupX | Launch Your Ideas</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
-    <div class="container nav-container">
-      <div class="logo">NovaLaunch</div>
-      <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Testimonials</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
+    <div class="logo">StartupX</div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#footer">Contact</a>
+      <a href="#" class="btn-outline">Login</a>
+    </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-content">
-      <h1>Launch your startup with confidence</h1>
-      <p>NovaLaunch is your ultimate solution to build, manage and grow your product seamlessly.</p>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Bring Your Ideas to Life</h1>
+      <p>Empower your startup with tools built for success. Launch, grow, and scale effortlessly.</p>
       <div class="hero-buttons">
-        <a href="#" class="btn primary">Get Started</a>
-        <a href="#" class="btn secondary">Learn More</a>
+        <a href="#" class="btn">Get Started</a>
+        <a href="#" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <img src="https://source.unsplash.com/600x400/?startup,technology" alt="Startup" class="hero-img" data-aos="fade-left">
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2 data-aos="fade-up">Our Core Features</h2>
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-right">
+        <h3>Fast Deployment</h3>
+        <p>Launch your platform in minutes with our one-click tools.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up">
+        <h3>Cloud Scaling</h3>
+        <p>Scale as you grow without worrying about infrastructure.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-left">
+        <h3>Secure & Reliable</h3>
+        <p>Bank-level encryption and 99.9% uptime for your peace of mind.</p>
       </div>
     </div>
   </section>
 
-  <section class="features">
-    <div class="container">
-      <h2>Why Choose NovaLaunch?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Fast Setup</h3>
-          <p>Get your product up and running in minutes with our intuitive tools.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Cloud Based</h3>
-          <p>Access your dashboard from anywhere in the world, anytime.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Analytics</h3>
-          <p>Track growth and make smarter decisions with real-time analytics.</p>
-        </div>
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2 data-aos="fade-up">What Our Users Say</h2>
+    <div class="testimonials-list">
+      <div class="testimonial" data-aos="zoom-in">
+        <p>"StartupX helped us launch our MVP in just 2 weeks. Amazing platform!"</p>
+        <strong>— Ashish, Founder of Appify</strong>
+      </div>
+      <div class="testimonial" data-aos="zoom-in" data-aos-delay="100">
+        <p>"The scalability and support are unmatched. Highly recommended!"</p>
+        <strong>— Priya, CEO of Techy</strong>
+      </div>
+      <div class="testimonial" data-aos="zoom-in" data-aos-delay="200">
+        <p>"Using StartupX was a game changer for our remote team workflow."</p>
+        <strong>— Rahul, DevOps Lead</strong>
       </div>
     </div>
   </section>
 
-  <section class="testimonials">
-    <div class="container">
-      <h2>What Our Users Say</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial">
-          <p>"NovaLaunch helped me turn my idea into a product in just 3 days. Amazing support!"</p>
-          <h4>— Aarya, Product Designer</h4>
-        </div>
-        <div class="testimonial">
-          <p>"Smooth and efficient. Everything just works. Love the UI!"</p>
-          <h4>— Rishi, Developer</h4>
-        </div>
-        <div class="testimonial">
-          <p>"I gained over 2,000 users in the first week. Highly recommend NovaLaunch!"</p>
-          <h4>— Sneha, Startup Founder</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 NovaLaunch. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <p>© 2025 StartupX Inc. | All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
