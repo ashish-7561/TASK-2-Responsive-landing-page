@@ -6,191 +6,170 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
-  scroll-behavior: smooth;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Header */
 .header {
+  background-color: #0f172a;
+  padding: 20px 0;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3e50;
-  padding: 20px;
-  color: #fff;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  letter-spacing: 1px;
-  animation: fadeInDown 1s ease-out;
+  color: #fff;
 }
 
 .nav a {
-  color: white;
-  margin-left: 20px;
+  color: #fff;
   text-decoration: none;
+  margin-left: 25px;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 .nav a:hover {
-  color: #f1c40f;
+  color: #60a5fa;
 }
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: linear-gradient(to right, #3b82f6, #6366f1);
   color: white;
-  padding: 100px 20px;
   text-align: center;
-  animation: fadeIn 1s ease-in;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
   margin-bottom: 30px;
 }
 
+.hero-buttons {
+  margin-top: 20px;
+}
+
 .btn {
-  background-color: white;
-  color: #764ba2;
-  padding: 12px 25px;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 6px;
   font-weight: bold;
-  border: none;
-  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #ddd;
-  transform: scale(1.05);
+.primary {
+  background: #fff;
+  color: #3b82f6;
 }
 
-/* Features Section */
+.primary:hover {
+  background: #e0e7ff;
+}
+
+.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.secondary:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Features */
 .features {
-  padding: 60px 20px;
-  background: white;
+  background-color: #f9fafb;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .features h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  animation: fadeInUp 1s ease-in;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  max-width: 1000px;
-  margin: auto;
 }
 
 .feature-card {
-  background-color: #f0f0f0;
+  background: #fff;
   padding: 25px;
   border-radius: 10px;
-  transition: transform 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Testimonials Section */
+/* Testimonials */
 .testimonials {
-  padding: 60px 20px;
-  background: #f3f4f6;
+  background: #f1f5f9;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .testimonials h2 {
-  margin-bottom: 30px;
-  animation: fadeInUp 1s ease-in;
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-.testimonials-list {
-  display: flex;
-  flex-wrap: wrap;
+.testimonial-grid {
+  display: grid;
   gap: 30px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .testimonial {
   background: white;
-  padding: 20px;
-  width: 300px;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-.testimonial:hover {
-  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
 /* Footer */
 .footer {
-  background: #2c3e50;
+  background-color: #0f172a;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 30px;
-  animation: fadeIn 1s ease-in;
 }
 
 /* Responsive Tweaks */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .hero h1 {
     font-size: 2rem;
   }
-
   .hero p {
     font-size: 1rem;
   }
-
-  .nav {
-    justify-content: center;
+  .btn {
     margin-top: 10px;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .nav a {
-    margin: 10px;
-  }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
