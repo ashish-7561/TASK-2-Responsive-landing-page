@@ -198,6 +198,41 @@
       <div class="testimonial">“Highly recommend to others.” – User C</div>
     </div>
   </section>
+  <!-- Add this inside <body>, just before the closing </body> -->
+<button class="feedback-btn" onclick="openFeedback()">Give Feedback</button>
+
+<script>
+  function openFeedback() {
+    const feedback = prompt("We'd love your feedback! Please share your thoughts:");
+    if (feedback) {
+      alert("Thanks for your feedback!");
+      // You can send it to a backend using fetch or save it locally
+    }
+  }
+</script>
+
+<style>
+  .feedback-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #764ba2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 999;
+    transition: background 0.3s;
+  }
+
+  .feedback-btn:hover {
+    background-color: #5e3e87;
+  }
+</style>
+
 
   <section id="contact" class="contact" data-aos="fade-up">
     <h2>Stay Updated</h2>
@@ -217,5 +252,6 @@
   </script>
 </body>
 </html>
+
 
 
