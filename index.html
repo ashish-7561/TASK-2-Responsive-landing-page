@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Responsive-Landing Page</title>
+  <title>Responsive Landing Page</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
     * {
@@ -142,6 +142,26 @@
       padding: 20px;
     }
 
+    .feedback-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #764ba2;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 999;
+      transition: background 0.3s;
+    }
+
+    .feedback-btn:hover {
+      background-color: #5e3e87;
+    }
+
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -167,7 +187,7 @@
 <body>
 
   <header class="header">
-    <div class="logo"> Startup Site</div>
+    <div class="logo">Startup Site</div>
     <nav>
       <a href="#features">Features</a>
       <a href="#testimonials">Testimonials</a>
@@ -198,41 +218,6 @@
       <div class="testimonial">“Highly recommend to others.” – User C</div>
     </div>
   </section>
-  <!-- Add this inside <body>, just before the closing </body> -->
-<button class="feedback-btn" onclick="openFeedback()">Give Feedback</button>
-
-<script>
-  function openFeedback() {
-    const feedback = prompt("We'd love your feedback! Please share your thoughts:");
-    if (feedback) {
-      alert("Thanks for your feedback!");
-      // You can send it to a backend using fetch or save it locally
-    }
-  }
-</script>
-
-<style>
-  .feedback-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #764ba2;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 999;
-    transition: background 0.3s;
-  }
-
-  .feedback-btn:hover {
-    background-color: #5e3e87;
-  }
-</style>
-
 
   <section id="contact" class="contact" data-aos="fade-up">
     <h2>Stay Updated</h2>
@@ -246,12 +231,21 @@
     <p>&copy; 2025 Ashish. All rights reserved.</p>
   </footer>
 
+  <!-- Feedback Button -->
+  <button class="feedback-btn" onclick="openFeedback()">Give Feedback</button>
+
+  <!-- JS Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    function openFeedback() {
+      const feedback = prompt("We'd love your feedback! Please share your thoughts:");
+      if (feedback) {
+        alert("Thanks for your feedback!");
+        // Optionally send to server here
+      }
+    }
   </script>
 </body>
 </html>
-
-
-
